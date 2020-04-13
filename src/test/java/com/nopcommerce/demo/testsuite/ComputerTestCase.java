@@ -20,7 +20,7 @@ public class ComputerTestCase extends TestBase {
     Test 01
     User should navigate to Computers page & Assert text "Computers"
      */
-    @Test
+    @Test(priority = 0,groups = {"Sanity","Regression"})
     public void userShouldNavigateToComputerPage() {
         //click on computer tab on homepage
         homePage.clickOnComputerTab();
@@ -34,7 +34,7 @@ public class ComputerTestCase extends TestBase {
     User should navigate to Computers page, select Build your own computer,
     select 400gb HDD option radio button, select Add to cart & Assert message "The product has been added to your shopping cart"
      */
-    @Test
+    @Test(priority = 1,groups ={"Sanity","Regression"} )
     public void addProductToShoppingCart() {
         //click the computer tab on HomePage
         homePage.clickOnComputerTab();

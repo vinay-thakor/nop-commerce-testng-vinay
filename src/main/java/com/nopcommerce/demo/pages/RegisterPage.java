@@ -27,22 +27,22 @@ public class RegisterPage extends Utility {
     }
 
     public void selectMaleGenderRadioButton() {
-        waitUntilElementToBeClickable(maleGenderRadioBtn,10);
+        waitUntilElementToBeClickable(maleGenderRadioBtn,20);
         radioButtonClick(maleGenderRadioBtn);
     }
 
     public void selectFemaleGenderRadioButton() {
-        waitUntilElementToBeClickable(firstNameField,10);
+        waitUntilElementToBeClickable(firstNameField,20);
         radioButtonClick(femaleGenderRadioBtn);
     }
 
     public void sendTextToFirstNameField(String str) {
-        waitUntilElementToBeClickable(firstNameField,10);
+        waitUntilElementToBeClickable(firstNameField,20);
         sendTextToElement(firstNameField, str);
     }
 
     public void sendTextToLastNameField(String str) {
-        waitUntilElementToBeClickable(lastNameField,10);
+        waitUntilElementToBeClickable(lastNameField,20);
         sendTextToElement(lastNameField, str);
     }
 
@@ -59,12 +59,12 @@ public class RegisterPage extends Utility {
     }
 
     public void sendTextToEmailField(String str) {
-        waitUntilElementToBeClickable(emailField,10);
+        waitUntilElementToBeClickable(emailField,20);
         sendTextToElement(emailField, str);
     }
 
     public void sendTextToCompanyField(String str) {
-        waitUntilElementToBeClickable(companyNameField,10);
+        waitUntilElementToBeClickable(companyNameField,20);
         sendTextToElement(companyNameField, str);
     }
 
@@ -73,17 +73,16 @@ public class RegisterPage extends Utility {
     }
 
     public void sendTextToPasswordField(String str) {
-        waitUntilElementToBeClickable(passwordField,10);
+        waitUntilElementToBeClickable(passwordField,20);
         sendTextToElement(passwordField, str);
     }
 
     public void sendTextToConfirmPasswordField(String str) {
-        waitUntilElementToBeClickable(confirmPasswordField,10);
+        waitUntilElementToBeClickable(confirmPasswordField,20);
         sendTextToElement(confirmPasswordField, str);
     }
 
     public void clickOnRegisterButton() {
         clickOnElement(registerBtn);
     }
-
 }

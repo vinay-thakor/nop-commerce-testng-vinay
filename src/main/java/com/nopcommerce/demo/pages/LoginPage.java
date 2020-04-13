@@ -10,6 +10,7 @@ public class LoginPage extends Utility {
     By emailField = By.cssSelector("input#Email");
     By passwordField = By.cssSelector("input.password");
     By loginBtn = By.cssSelector("input.button-1.login-button");
+    By loginErrorTex = By.cssSelector("div.message-error");
 
     //methods performing actions on elements
     public void verifyTextWelcomePleaseSignIn(String str) {
@@ -28,6 +29,10 @@ public class LoginPage extends Utility {
 
     public void clickOnLoginButton() {
         clickOnElement(loginBtn);
+    }
+
+    public void verifyLoginErrorMessage(String str){
+        verifyTextAssertMethod(loginErrorTex,str);
     }
 
 }

@@ -1,5 +1,6 @@
 package com.nopcommerce.demo.testsuite;
 
+import com.nopcommerce.demo.loadproperty.Loadproperty;
 import com.nopcommerce.demo.pages.*;
 import com.nopcommerce.demo.testbase.TestBase;
 import org.testng.annotations.BeforeTest;
@@ -10,13 +11,27 @@ import static com.nopcommerce.demo.utility.Utility.getRandomString;
 public class RegisterTestCase extends TestBase {
 
     static String email = null;
-    String password = "abc123";
+
+
+
 
 
     //object creation
     HomePage homePage = new HomePage();
     RegisterPage registerPage = new RegisterPage();
     RegistrationCompletePage registrationCompletePage = new RegistrationCompletePage();
+    Loadproperty loadproperty = new Loadproperty();
+    String firstName = loadproperty.getProperty("firstName");
+    String lastName = loadproperty.getProperty("lastName");
+    String password = loadproperty.getProperty("password");
+    String companyName = loadproperty.getProperty("companyName");
+    String dayOB = loadproperty.getProperty("dayOB");
+    String monthOB = loadproperty.getProperty("monthOB");
+    String yearOB = loadproperty.getProperty("yearOB");
+
+
+
+
 
 
     //assigning random value for email every time test cases run
@@ -33,7 +48,7 @@ public class RegisterTestCase extends TestBase {
       Message   “Your Personal Details“
       Assert above message.
     */
-    @Test
+    @Test(priority = 0,groups = {"Sanity","Regression"})
     public void userShouldNavigateToRegisterPageSuccessfully() {
         //click on Register link on HomePage
         homePage.clickOnRegisterLink();
@@ -52,7 +67,7 @@ public class RegisterTestCase extends TestBase {
         Success Message  “Your registration completed”
         Assert above message.
     */
-    @Test
+    @Test(priority = 1,groups = {"Smoke","Regression"})
     public void userShouldRegisterSuccessfullyAndLoginUsingSameCredentials() {
         //click on Register link on HomePage
         homePage.clickOnRegisterLink();
@@ -64,25 +79,25 @@ public class RegisterTestCase extends TestBase {
         //registerPage.selectFemaleGenderRadioButton();
 
         //send text to First Name field
-        registerPage.sendTextToFirstNameField("Prime");
+        registerPage.sendTextToFirstNameField(loadproperty.getProperty(firstName));
 
         //send text to Last Name field
-        registerPage.sendTextToLastNameField("Testing");
+        registerPage.sendTextToLastNameField(lastName);
 
         //select day from DOB drop down menu
-        registerPage.selectDayDOBFromDropDownMenu("15");
+        registerPage.selectDayDOBFromDropDownMenu(dayOB);
 
         //select month from DOB drop down menu
-        registerPage.selectMonthDOBFromDropDownMenu("May");
+        registerPage.selectMonthDOBFromDropDownMenu(monthOB);
 
         //select year from DOB drop down menu
-        registerPage.selectYearDOBFromDropDownMenu("2014");
+        registerPage.selectYearDOBFromDropDownMenu(yearOB);
 
         //send text to Email field
         registerPage.sendTextToEmailField(email);
 
         //send text to Company name field
-        registerPage.sendTextToCompanyField("Square 1");
+        registerPage.sendTextToCompanyField(companyName);
 
         //check Newsletter checkbox is selected
         registerPage.selectNewsLetterCheckBox();

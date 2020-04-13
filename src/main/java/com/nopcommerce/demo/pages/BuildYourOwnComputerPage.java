@@ -23,5 +23,4 @@ public class BuildYourOwnComputerPage extends Utility {
         verifyTextAssertMethod(textForProductAddedToCart, str);
     }
 
-
 }
