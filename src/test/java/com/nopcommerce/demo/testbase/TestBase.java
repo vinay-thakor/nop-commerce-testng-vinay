@@ -20,7 +20,7 @@ public class TestBase extends BasePage {
 
 
     //open browser
-    @BeforeMethod(groups = {"Sanity","Smoke","Regression"})
+    @BeforeMethod(groups = {"Sanity","Regression","Smoke"})
     public void openBrowser() {
         browserSelector.selectBrowser(browser);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -29,7 +29,7 @@ public class TestBase extends BasePage {
     }
 
     //close browser
-    @AfterMethod(groups = {"Sanity","Smoke","Regression"})
+    @AfterMethod(groups = {"Sanity","Regression","Smoke"})
     public void closeBrowser() {
         driver.quit();
     }

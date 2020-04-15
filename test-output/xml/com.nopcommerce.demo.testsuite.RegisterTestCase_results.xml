@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="16.294">
+           time="3.420">
   <properties />
-            <testcase name="userShouldRegisterSuccessfullyAndLoginUsingSameCredentials" time="14.194" classname="com.nopcommerce.demo.testsuite.RegisterTestCase">
+            <testcase name="userShouldRegisterSuccessfullyAndLoginUsingSameCredentials" time="2.019" classname="com.nopcommerce.demo.testsuite.RegisterTestCase">
                 <failure type="java.lang.IllegalArgumentException"
                   message="Keys to send should be a not null CharSequence"
               >
@@ -14,7 +14,7 @@
   org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
   com.nopcommerce.demo.utility.Utility.sendTextToElement(Utility.java:125)
   com.nopcommerce.demo.pages.RegisterPage.sendTextToFirstNameField(RegisterPage.java:41)
-  com.nopcommerce.demo.testsuite.RegisterTestCase.userShouldRegisterSuccessfullyAndLoginUsingSameCredentials(RegisterTestCase.java:82)
+  com.nopcommerce.demo.testsuite.RegisterTestCase.userShouldRegisterSuccessfullyAndLoginUsingSameCredentials(RegisterTestCase.java:72)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -45,6 +45,6 @@
           </testcase>
   
   
-            <testcase name="userShouldNavigateToRegisterPageSuccessfully" time="2.100" classname="com.nopcommerce.demo.testsuite.RegisterTestCase" />
+            <testcase name="userShouldNavigateToRegisterPageSuccessfully" time="1.401" classname="com.nopcommerce.demo.testsuite.RegisterTestCase" />
       
 </testsuite>

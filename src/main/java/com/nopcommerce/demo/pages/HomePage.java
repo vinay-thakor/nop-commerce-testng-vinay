@@ -12,14 +12,18 @@ public class HomePage extends Utility {
 
     //methods performing actions on elements
     public void clickOnComputerTab() {
+        waitUntilPresenceOfElementLocated(By.xpath("//ul[@class='top-menu notmobile']/li[1]/a"),40);
+
         clickOnElement(computerTab);
     }
 
     public void clickOnRegisterLink() {
+        waitUntilPresenceOfElementLocated(By.xpath("//div[@class='header-links-wrapper']//a[contains(text(),'Register')]"),40);
         clickOnElement(registerLink);
     }
 
     public void clickOnLoginLink() {
+        waitUntilPresenceOfElementLocated(By.cssSelector("a.ico-login"),40);
         clickOnElement(logInLink);
     }
 }

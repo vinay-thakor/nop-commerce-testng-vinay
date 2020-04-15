@@ -14,8 +14,6 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
     </listeners>
 
-
-
     <test name="Login Test" >
         <classes>
             <class name="com.nopcommerce.demo.testsuite.LoginTestCase"></class>

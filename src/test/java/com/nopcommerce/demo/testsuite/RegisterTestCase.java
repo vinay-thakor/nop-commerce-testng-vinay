@@ -11,11 +11,7 @@ import static com.nopcommerce.demo.utility.Utility.getRandomString;
 public class RegisterTestCase extends TestBase {
 
     static String email = null;
-
-
-
-
-
+   // String password = "abc123";
     //object creation
     HomePage homePage = new HomePage();
     RegisterPage registerPage = new RegisterPage();
@@ -29,17 +25,11 @@ public class RegisterTestCase extends TestBase {
     String monthOB = loadproperty.getProperty("monthOB");
     String yearOB = loadproperty.getProperty("yearOB");
 
-
-
-
-
-
     //assigning random value for email every time test cases run
-    @BeforeTest
+    @BeforeTest(groups  = {"Sanity", "Regression","Smoke"})
     public static void setUp() {
         email = "xyz" + getRandomString(5) + "@gmail.com";
     }
-
 
     /*
       Test Case 1
@@ -48,7 +38,7 @@ public class RegisterTestCase extends TestBase {
       Message   “Your Personal Details“
       Assert above message.
     */
-    @Test(priority = 0,groups = {"Sanity","Regression"})
+    @Test(priority = 0, groups = {"Sanity", "Regression"})
     public void userShouldNavigateToRegisterPageSuccessfully() {
         //click on Register link on HomePage
         homePage.clickOnRegisterLink();
@@ -67,7 +57,7 @@ public class RegisterTestCase extends TestBase {
         Success Message  “Your registration completed”
         Assert above message.
     */
-    @Test(priority = 1,groups = {"Smoke","Regression"})
+    @Test(priority = 1, groups = {"Smoke", "Regression"})
     public void userShouldRegisterSuccessfullyAndLoginUsingSameCredentials() {
         //click on Register link on HomePage
         homePage.clickOnRegisterLink();
@@ -93,7 +83,7 @@ public class RegisterTestCase extends TestBase {
         //select year from DOB drop down menu
         registerPage.selectYearDOBFromDropDownMenu(yearOB);
 
-        //send text to Email field
+        //send texmail field
         registerPage.sendTextToEmailField(email);
 
         //send text to Company name field
